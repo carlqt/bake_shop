@@ -13,10 +13,11 @@
 			<section id="main">
 				<%= render 'layouts/sidebar'%>
 				<section id="content"><!-- #content -->
-					<h1>Articles</h1>
+					
+					<%= yield %>	
 				</section>
 			</section>
-			<%= yield %>
+			
 			<%= render 'layouts/footer'%>
 		</div>
 	</body>
