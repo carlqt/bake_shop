@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>BakeShop</title>
+		<%= stylesheet_link_tag 'styles', :media=> 'screen'%>
+		<%= stylesheet_link_tag 'print', :media=> 'print'%>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="wrapper"><!-- #wrapper -->
+			<%= render 'layouts/menu'%>
+			<%= render 'layouts/header'%>
+			<section id="main">
+				<%= render 'layouts/sidebar'%>
+				<section id="content"><!-- #content -->
+					<h1>Articles</h1>
+				</section>
+			</section>
+			<%= yield %>
+			<%= render 'layouts/footer'%>
+		</div>
+	</body>
+</html>
