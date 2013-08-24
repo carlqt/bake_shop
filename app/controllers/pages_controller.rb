@@ -10,4 +10,8 @@ class PagesController < ApplicationController
   def menu
     
   end
+  
+  def products
+    
+  end
 end

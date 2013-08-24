@@ -11,6 +11,20 @@ header, footer, section, aside, nav, article {
 display: block;
 }
 
+
+.thumbnail {
+	float:left;
+	width:200px;
+	height:200px;
+	margin:5px;
+}
+
+.thumbnails tr {
+	text-align: center;
+}
+
+
+
 @font-face {
 	font-family: 'QikkiRegRegular';
 	src: url('/Qarmic_sans_Abridged-webfont.eot');

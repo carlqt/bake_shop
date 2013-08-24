@@ -2,6 +2,8 @@ BakeShop::Application.routes.draw do
   
   get "pages/help"
   get "pages/menu"
+  get "pages/products"
+  get "pages/products(/:prod)" => "pages#products", :as => 'products'
   resources :pages
   resources :users
   root :to => 'pages#home'

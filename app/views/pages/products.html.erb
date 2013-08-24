@@ -1,0 +1,21 @@
+<p><% params[:prod]%></p>
+
+
+<% if params[:prod] == nil %>
+<h1>Products</h1>
+<table class = "thumbnails">
+	<tr>
+		<td><%= image_tag("cake.jpg", :class => "thumbnail") %></td>
+		<td><%= image_tag("muffin.jpg", :class => "thumbnail") %></td>
+		<td><%= image_tag("brownies.jpg", :class => "thumbnail") %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Cakes", products_path(:prod => "cake") %></td>
+		<td><%= link_to "Muffins", products_path(:prod => "muffin")%></td>
+		<td><%= link_to "Brownies", products_path(:prod => "brownies")%></td>
+	</tr>
+</table>
+<% else %>
+<h1><%= params[:prod].capitalize %></h1>
+
+<% end %>
