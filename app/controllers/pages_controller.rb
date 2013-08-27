@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    
+    @gender = params[:gender]
   end
   
   def help

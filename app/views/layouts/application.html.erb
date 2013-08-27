@@ -15,6 +15,13 @@
 				<section id="content"><!-- #content -->
 					
 					<%= yield %>	
+					<div class="debug">
+							<% params.each do |key, value|  %>
+								<% if key != "utf8" && key != "authenticity_token"%>
+									<%= "#{key} = #{value}"%><br />
+								<% end %>
+							<% end %>
+					</div>
 				</section>
 			</section>
 			

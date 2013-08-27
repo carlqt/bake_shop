@@ -11,6 +11,10 @@ header, footer, section, aside, nav, article {
 display: block;
 }
 
+.debug {
+	border-style:solid;
+	padding: 15px;
+}
 
 .thumbnail {
 	float:left;
