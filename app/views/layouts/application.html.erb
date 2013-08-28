@@ -21,13 +21,19 @@
 
 					
 					<%= yield %>	
+				<% if session[:username] == 'admin'%>
 					<div class="debug">
+						
 							<% params.each do |key, value|  %>
 								<% if key != "utf8" && key != "authenticity_token"%>
 									<%= "#{key} = #{value}"%><br />
 								<% end %>
+								
 							<% end %>
+							<%= "Session username: " + session[:username].to_s%>
+						
 					</div>
+				<% end %>	
 				</section>
 			</section>
 			

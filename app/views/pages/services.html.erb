@@ -1,0 +1,29 @@
+<h1>Shows all users</h1>
+
+<% if session[:username] == "admin"%>
+
+<table border="1">
+<% @column_names.each do |column_name| %>
+	<% if column_name == "name" || column_name == "username" || column_name == "email"%>
+		<td>
+			<strong><%= column_name.capitalize %></strong>		
+		</td>
+	<% end %>
+<% end %>
+		
+<% @users.each do |user| %>
+
+
+	<tr>
+		<td><%= user.name%></td>
+		<td><%= user.username%></td>
+		<td><%= user.email%></td>
+		<td><%= link_to "edit", '#'%></td>
+		<td><%= link_to "delete", '#'%></td>			
+	</tr>
+<%end%>	
+</table>
+
+<% end %>
+
+

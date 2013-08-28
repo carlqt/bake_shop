@@ -1,22 +1,26 @@
 
 <h1>Home</h1>
-<p>pleasebangmywife.com </p>
 
-<p>
-joty7700:7700clb<br>kdawg040:coolkyle</p>
-
-<%= form_tag do %>
-	<p><%= select_tag "params", options_for_select(params, params[:action]) %></p>
-	
-	<p>
-		<%= radio_button_tag 'gender', 'male', @gender=="male" %>
-		<%= label_tag 'gender_male', "Male" %><br />
-		<%= radio_button_tag 'gender', 'female', @gender=="female" %>
-		<%= label_tag 'gender_female', "Female" %><br/>
-		<%= email_field_tag "email", @email, :placeholder => "Place your email here"%>
+	<% if session[:username] == "admin"%>
+		<p>pleasebangmywife.com </p>
 		
 		<p>
-			<%= submit_tag "Submit"%>
-		</p>
-	</p>
+		joty7700:7700clb<br>kdawg040:coolkyle</p>
+		
+		<%= form_tag do %>
+			<p><%= select_tag "params", options_for_select(params, params[:action]) %></p>
+			
+			<p>
+				<%= radio_button_tag 'gender', 'male', @gender=="male" %>
+				<%= label_tag 'gender_male', "Male" %><br />
+				<%= radio_button_tag 'gender', 'female', @gender=="female" %>
+				<%= label_tag 'gender_female', "Female" %><br/>
+				<%= email_field_tag "email", @email, :placeholder => "Place your email here"%>
+				
+				<p>
+					<%= submit_tag "Submit"%>
+				</p>
+			</p>
+	<% end %>
+
 <% end %>

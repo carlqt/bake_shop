@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
                     :length => { :maximum => 25}
 
   validates :username,  :presence => true,
-                        :length => { :maximum => 25,
-                        :uniqueness => {:case_sensitive => false}}                    
+                        :length => { :maximum => 25},
+                        :uniqueness => {:case_sensitive => false}                    
                     
   validates :email, :presence => true,
                     :uniqueness => {:case_sensitive => false}
@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, :presence => true
   
   def self.authenticate(username, password)
-    user = find_by_username(username)
+    user = User.find_by_username(username)
     
     if user && user.password == Digest::MD5.hexdigest(password)
       user

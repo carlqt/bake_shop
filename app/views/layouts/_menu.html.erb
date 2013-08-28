@@ -5,9 +5,16 @@
 				<li><%= link_to "About", '#' %></li>
 				<li><%= link_to "Recipes", '#' %></li>
 				<li><%= link_to "Products", products_path %></li>
-				<li><%= link_to "Services", '#' %></li>
+				
+				<li><%= link_to "Services", pages_services_path %></li>
+				
 				<li><%= link_to "Contact Us", '#' %></li>
+				<%if current_user %>
+					<li><%= "Hi, " + user_name %></li>
+				<% else %>
 				<li><%= link_to "Login", user_login_path %></li>
+				
+				<% end %>
 			</ul>
 		</div>
 	</nav><!-- end of top nav -->

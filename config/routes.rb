@@ -3,6 +3,8 @@ BakeShop::Application.routes.draw do
   
   
   get "user/login" => "sessions#new"
+  get "user/logout" => "sessions#destroy", :as => "logout"
+  get "pages/services"
   #get "users/signup" => "users#new", :as => 'signup'
   get "pages/help"
   get "pages/menu"

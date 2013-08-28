@@ -7,8 +7,9 @@ class PagesController < ApplicationController
     @email = params[:email]
   end
   
-  def help
-    
+  def services
+    @users = User.all
+    @column_names = User.column_names
   end
   
   def menu
