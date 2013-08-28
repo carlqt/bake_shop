@@ -21,6 +21,19 @@
 					<%= submit_tag "Submit"%>
 				</p>
 			</p>
+		<% end %>
+		
+	<% elsif current_user %>
+		This sample was created by Carl William Tablante. As of now the working links are as follows:
+		<p>
+		<ul>
+			<li>HOME</li>
+			<li>PRODUCTS</li>
+			<li>SERVICES</li>
+			<li>LOGIN</li>
+			<li>SIGN UP NOW</li>
+			<li>LOGOUT NOW</li>
+		</ul>
+		</p>
 	<% end %>
 
-<% end %>

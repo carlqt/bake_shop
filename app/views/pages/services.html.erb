@@ -1,6 +1,6 @@
 <h1>Shows all users</h1>
 
-<% if session[:username] == "admin"%>
+<% if current_user %>
 
 <table border="1">
 <% @column_names.each do |column_name| %>
@@ -18,8 +18,8 @@
 		<td><%= user.name%></td>
 		<td><%= user.username%></td>
 		<td><%= user.email%></td>
-		<td><%= link_to "edit", '#'%></td>
-		<td><%= link_to "delete", '#'%></td>			
+		<td><%= link_to "edit", edit_user_path(user)%></td>
+		<td><%= link_to "Show", user_path(user)%></td>			
 	</tr>
 <%end%>	
 </table>

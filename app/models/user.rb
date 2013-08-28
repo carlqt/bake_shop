@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
             :confirmation => true,
             :length => {:within => 6..40}
             
-  validates :password_confirmation, :presence => true
   
   def self.authenticate(username, password)
     user = User.find_by_username(username)
