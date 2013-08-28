@@ -15,7 +15,11 @@ display: block;
 	border-style:solid;
 	padding: 15px;
 }
-
+td {
+	padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: .5em;
+}
 .thumbnail {
 	float:left;
 	width:200px;
