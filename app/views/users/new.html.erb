@@ -1,0 +1,38 @@
+<h1><%= @title %></h1>
+
+
+<%= form_for @user do |f| %>
+		<%= render 'shared/error_message' %>
+	<p>
+		<p>
+			<%= f.text_field :name%><br/>
+			<%= f.label :name %><br/>
+		</p>
+		
+		<p>
+			<%= f.text_field :username, :placeholder => "login name"%><br/>
+			<%= f.label :username%><br/>
+		</p>
+		
+		<p>
+			<%= f.email_field :email, :placeholder => "Email"%><br/>
+			<%= f.label :email %><br/>
+		</p>
+		
+		<p>
+			<%= f.password_field :password%><br/>
+			<%= f.label :password%><br/>
+		</p>
+		
+		<p>
+			<%= f.password_field :password_confirmation %><br/>
+			<%= f.label :password_confirmation %>
+		</p>
+		
+		<p>
+			<%= submit_tag "Sign up"%>
+		</p>
+	</p>
+<% end %>
+
+

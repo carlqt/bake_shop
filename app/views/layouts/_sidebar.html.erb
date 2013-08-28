@@ -4,7 +4,10 @@
 						<li><%= link_to "Create Meals", '#' %></li>
 						<li><%= link_to "Chat With Friends", '#' %></li>
 						<li><%= link_to "Order Now", '#' %></li>
-						<li><%= link_to "Sign Up Now", users_sign_up_path %></li>
+						<li><%= link_to "Sign Up Now", users_signup_path %></li>
+						<% if current_user %>
+						<li><%= link_to "Logout Now", session_path %></li>
+						<% end %>
 					</ul>
 					
 				<h3>Sponsors</h3>

@@ -1,17 +1,23 @@
 BakeShop::Application.routes.draw do
   
-  get "users/sign_up"
+  
+  
+  get "user/login" => "sessions#new"
+  #get "users/signup" => "users#new", :as => 'signup'
   get "pages/help"
   get "pages/menu"
   #get "pages/products"
   get "pages/products(/:prod)" => "pages#products", :as => 'products'
   post "pages/home"
   
-  #get "users/new" => "users#sign_up"
+  get "users/signup" => "users#new"
   
   #resources :pages
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   root :to => 'pages#home'
+  
+  
   
   #match '/help', :to => 'pages#help'
   
