@@ -1,0 +1,12 @@
+<h1>Profile</h1>
+
+
+<p>Name: <%= @profile.name%></p>
+
+<p>Userame: <%= @profile.username%></p>
+
+<p>Email: <%= @profile.email%></p>
+
+<p>
+<%= button_to "Delete", user_path(@profile), :method => "delete", :data => {:confirm => "Are you sure?"} %>
+</p>

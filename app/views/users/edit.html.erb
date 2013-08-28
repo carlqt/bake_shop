@@ -1,0 +1,24 @@
+<h1>Edit</h1>
+
+<%= form_for @user do |f| %>
+	<%= render 'shared/error_message' %>
+	<p>
+		<%= f.text_field :name%><br/>
+		<%= f.label :name %><br/>
+	</p>
+	
+	<p>
+		<%= f.text_field :username %><br/>
+		<%= f.label :username%><br/>
+	</p>
+	
+	<p>
+		<%= f.email_field :email%><br/>
+		<%= f.label :email %><br/>
+	</p>
+	
+	<p> <%= f.submit "Update" %></p>
+
+
+<% end%>
+
