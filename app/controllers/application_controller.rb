@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
     session[:username] = user.username
     #session[:expires_at] = Time.now + 60.minutes
-    request.session_options[:expire_after] = 2.minutes
+    #request.session_options[:expire_after] = 2.minutes
   end 
   
 end
