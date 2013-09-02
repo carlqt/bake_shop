@@ -2,27 +2,45 @@
 
 <% if current_user %>
 
-<table border="1">
-<% @column_names.each do |column_name| %>
-	<% if column_name == "name" || column_name == "username" || column_name == "email"%>
-		<td>
-			<strong><%= column_name.capitalize %></strong>		
-		</td>
+	<table border="1">
+	<% @column_names.each do |column_name| %>
+		<% if column_name == "name" || column_name !== "username" || column_name !== "updated_at"%>
+			<td>
+				<strong><%= column_name.capitalize %></strong>		
+			</td>
+		<% end %>
 	<% end %>
-<% end %>
-		
-<% @users.each do |user| %>
+			
+	<% @users.each do |user| %>
+	
+	
+		<tr>
+			<td><%= user.name%></td>
+			<td><%= user.username%></td>
+			<td><%= user.email%></td>
+			<td><%= link_to "edit", edit_user_path(user)%></td>
+			<td><%= link_to "Show", user_path(user)%></td>			
+		</tr>
+	<%end%>	
+	</table>
 
+	<% else %>
+	
+		<div id="myCarousel" class="carousel slide" >
+		  <!-- Carousel items -->
+		  <div class="carousel_image">
+			  <div class="carousel-inner" >
+	
+			    <div class="active item"><%= image_tag("cake.jpg") %></div>
+			    <div class="item"><%= image_tag("muffin.jpg") %></div>
+			    <div class="item"><%= image_tag("brownies.jpg") %></div>
+			  </div>
+		  </div>
+		  <!-- Carousel nav -->
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
 
-	<tr>
-		<td><%= user.name%></td>
-		<td><%= user.username%></td>
-		<td><%= user.email%></td>
-		<td><%= link_to "edit", edit_user_path(user)%></td>
-		<td><%= link_to "Show", user_path(user)%></td>			
-	</tr>
-<%end%>	
-</table>
 
 <% end %>
 

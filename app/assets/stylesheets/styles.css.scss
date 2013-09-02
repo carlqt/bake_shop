@@ -1,3 +1,5 @@
+@import 'bootstrap';
+
 /* Created by http://freehtml5templates.com */
 
 /* reset */
@@ -16,10 +18,19 @@ display: block;
 	padding: 15px;
 }
 td {
-	padding-top: .5em;
+	  padding-top: .5em;
     padding-bottom: .5em;
     padding-right: .5em;
 }
+
+.carousel_image img {
+  width: 500px;
+  height: 400px;
+  max-height: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .thumbnail {
 	float:left;
 	width:200px;
